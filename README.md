@@ -24,3 +24,5 @@ Preview locally:
 ```bash
 python3 -m http.server 8000   # then visit http://localhost:8000
 ```
+
+_Auto-deploy from GitHub verified on 2026-06-16._
