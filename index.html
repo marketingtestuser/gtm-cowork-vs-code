@@ -3,9 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Claude Code vs. Claude Cowork — Operator's Field Guide</title>
-<meta name="description" content="The tool that says 'for engineers' is actually the biggest unlock for business leaders. A field guide for GTM operators, revenue leaders, and anyone who's been told they don't need Claude Code.">
-<meta name="author" content="Jonathan Moss">
+<title>Claude CoWork vs Claude Code for B2B Sales and Marketing Teams</title>
+<meta name="description" content="A practical guide for B2B sales and marketing teams on when to use Claude CoWork vs Claude Code — by persona, use case, integration fit, buying trigger, ROI, and a clear decision framework.">
+<meta name="author" content="Jon Russo">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -796,23 +796,22 @@
 
 <!-- Top Bar -->
 <nav class="top-bar" role="navigation" aria-label="Site header">
-  <a href="https://www.aibusinessnetwork.ai/" target="_blank" rel="noopener">AI Business Network</a>
-  <span class="tagline">AI tools for business leaders who build, not just browse</span>
+  <a href="https://www.b2bfusiongroup.com/" target="_blank" rel="noopener">B2B Fusion</a>
+  <span class="tagline">Helping B2B teams turn GTM strategy into repeatable execution</span>
 </nav>
 
 <main class="container">
 
   <!-- Hero -->
   <header class="hero">
-    <img src="abn-logo-dark.png" alt="AI Business Network" style="height:80px;width:auto;margin-bottom:24px;display:block;margin-left:auto;margin-right:auto;">
-    <div class="badge">Operator's Field Guide</div>
-    <h1>The Tool That Says "For Engineers" Is Actually the Biggest Unlock for Business Leaders</h1>
-    <p class="subtitle">Claude Code vs. Claude Cowork &mdash; a guide for GTM operators, revenue leaders, and anyone who's been told they don't need it.</p>
+    <div class="badge">For B2B Sales &amp; Marketing Teams</div>
+    <h1>Claude CoWork vs Claude Code for B2B Sales and Marketing Teams</h1>
+    <p class="subtitle">Same underlying intelligence, two different operating environments. A practical guide to choosing the right layer &mdash; by persona, use case, buying trigger, and ROI.</p>
     <div class="author-row">
-      <div class="avatar" aria-hidden="true">JM</div>
+      <div class="avatar" aria-hidden="true">JR</div>
       <div class="author-info">
-        <div class="author-name">Jonathan Moss</div>
-        <div class="author-title">EVP Growth &amp; Operations, Experity &middot; Host, AI Business Network &middot; Revenue Architect, WbD</div>
+        <div class="author-name">Jon Russo</div>
+        <div class="author-title">B2B Fusion</div>
       </div>
     </div>
   </header>
@@ -821,454 +820,351 @@
   <nav class="toc" aria-label="Table of contents">
     <div class="toc-label">Contents</div>
     <ol>
-      <li><a href="#misconception">The $285B Misconception</a></li>
-      <li><a href="#what-they-are">What Each Tool Actually Is</a></li>
-      <li><a href="#comparison">The Honest Comparison</a></li>
-      <li><a href="#hidden-gem">Why Code Is the Hidden Gem for Business Operators</a></li>
-      <li><a href="#not-technical">"But I'm Not Technical"</a></li>
-      <li><a href="#decision-matrix">The Decision Matrix</a></li>
-      <li><a href="#getting-started">Getting Started: Your First 15 Minutes</a></li>
-      <li><a href="#what-i-built">What I Built (And You Can Too)</a></li>
+      <li><a href="#divide">The Divide: Business Workflow vs Technical Operating Environment</a></li>
+      <li><a href="#personas">Pain Points by Persona</a></li>
+      <li><a href="#use-cases">Use Cases That Expose the Difference</a></li>
+      <li><a href="#workflow-fit">Workflow and Integration Fit: Where the Work Actually Lives</a></li>
+      <li><a href="#buying-triggers">Buying Triggers, Champions, and Internal Politics</a></li>
+      <li><a href="#roi">ROI and the CFO Conversation</a></li>
+      <li><a href="#decision-guide">Decision Guide: CoWork, Code, or Both</a></li>
     </ol>
   </nav>
 
   <!-- Section 1 -->
-  <section id="misconception">
+  <section id="divide">
     <span class="section-number">01</span>
-    <h2>The $285B Misconception</h2>
-    <p>When Anthropic unveiled AI tools automating professional work in early 2026, legacy software stocks dropped <strong>$285 billion in a single day</strong>. The market understood immediately: the way work gets done was about to change.</p>
-    <p>In the fallout, Anthropic released two tools that matter for business operators: <strong>Claude Cowork</strong> (a visual, desktop-based workspace) and <strong>Claude Code</strong> (a terminal-based operating environment). Code was positioned as a developer tool. That framing stuck.</p>
-    <p>Business leaders scrolled past.</p>
-
-    <div class="pull-quote">
-      "I haven't used Code because it says it's for technical folks."
-    </div>
-
-    <p>A CEO said that to me last week. He's making the same mistake thousands of business leaders are making right now. Because <strong>Claude Code isn't a code editor. It's an AI operating system that happens to run in a terminal.</strong></p>
-    <p>The difference between Code and Cowork isn't skill level. It's the difference between using a tool and <em>building a system</em>. And if you're a business operator who's only using Cowork, you're leaving the most powerful capability on the table.</p>
-  </section>
-
-  <div class="section-divider"></div>
-
-  <!-- Section 2 -->
-  <section id="what-they-are">
-    <span class="section-number">02</span>
-    <h2>What Each Tool Actually Is</h2>
-    <p>Before we compare features, let's get the mental model right. These tools serve fundamentally different purposes, even though they run the same model underneath.</p>
+    <h2>The Divide: Business Workflow vs Technical Operating Environment</h2>
+    <p>Claude CoWork and Claude Code may share underlying intelligence, but they are built for different operating environments.</p>
 
     <div class="comparison-cards">
       <div class="comp-card cowork">
-        <h3>Claude Cowork</h3>
-        <div class="card-metaphor">"A smart contractor you hire for a day"</div>
+        <h3>Claude CoWork</h3>
+        <div class="card-metaphor">The business-user layer</div>
         <ul>
-          <li>Lives inside the Claude Desktop app (GUI)</li>
-          <li>Sandboxed Linux VM &mdash; safe, contained</li>
-          <li>Creates real files (.docx, .pptx, .xlsx, .pdf)</li>
-          <li>Built-in connectors (Gmail, Slack, Drive)</li>
-          <li>Visual task tracking and sub-agents</li>
-          <li>Plugin panel for skills</li>
+          <li>Built for sales, marketing, RevOps, enablement, and leadership</li>
+          <li>Turns scattered context into usable work</li>
+          <li>Briefs, reports, messaging, summaries, and plans</li>
+          <li>Repeatable workflows for business users</li>
         </ul>
         <div class="great-for">
-          <strong>Great for</strong>
-          One-off projects, document creation, quick data analysis
+          <strong>Best when</strong>
+          The team is trying to execute better GTM work.
         </div>
       </div>
 
       <div class="comp-card code">
         <h3>Claude Code</h3>
-        <div class="card-metaphor">"A full-time operator who sits at your desk every day"</div>
+        <div class="card-metaphor">The technical operating layer</div>
         <ul>
-          <li>Runs in your terminal (CLI)</li>
-          <li>Direct access to your file system &mdash; no sandbox</li>
-          <li>Reads, writes, edits ANY file on your machine</li>
-          <li>MCP servers connect to ANY tool (CRM, APIs, databases)</li>
-          <li>CLAUDE.md = persistent business context, auto-loaded every session</li>
-          <li>Agent specs = reusable AI team members you define once</li>
-          <li>Skills, hooks, automation pipelines</li>
+          <li>Built for developers, RevOps builders, and AI operators</li>
+          <li>Works inside files, repositories, and codebases</li>
+          <li>Powers workflow systems and automation</li>
+          <li>Creates durable, governed infrastructure</li>
         </ul>
         <div class="great-for">
-          <strong>Great for</strong>
-          Building systems, ongoing operations, multi-agent workflows
+          <strong>Best when</strong>
+          The team is building the system that makes that work repeatable.
         </div>
       </div>
+    </div>
+
+    <p>The core question is not which product is &ldquo;better.&rdquo; The core question is:</p>
+
+    <div class="pull-quote">
+      Is the team trying to execute better GTM work, or is it trying to build and maintain the system that makes that work repeatable?
+    </div>
+
+    <p>For most B2B sales and marketing teams, CoWork is the easier adoption layer. Code becomes more valuable when the organization needs <strong>architecture, version control, automation, and durable workflow infrastructure</strong>.</p>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- Section 2 -->
+  <section id="personas">
+    <span class="section-number">02</span>
+    <h2>Pain Points by Persona</h2>
+    <p>The right product choice starts with the pain point.</p>
+
+    <div class="unlock-grid">
+
+      <div class="unlock-card">
+        <div class="unlock-card-letter" style="background: var(--abn-royal);">A</div>
+        <h3>Sales Leaders</h3>
+        <p>Sales teams often struggle with shallow account research, inconsistent messaging, poor call preparation, and pipeline reviews that rely too heavily on rep narrative. CoWork can help turn CRM notes, call transcripts, intent signals, and account history into better account briefs, deal summaries, and coaching inputs.</p>
+      </div>
+
+      <div class="unlock-card">
+        <div class="unlock-card-letter" style="background: var(--abn-pink);">B</div>
+        <h3>Marketing Leaders</h3>
+        <p>Marketing teams often have plenty of content and data but lack a clear way to turn it into segment-specific campaigns, persona messaging, sales plays, and executive-ready narratives. CoWork can help synthesize market research, content libraries, campaign performance, and buyer insights into actionable GTM output.</p>
+      </div>
+
+      <div class="unlock-card">
+        <div class="unlock-card-letter" style="background: var(--abn-mint); color: var(--abn-dark);">C</div>
+        <h3>SDR / BDR Teams</h3>
+        <p>Outbound teams often waste time researching accounts and still produce generic emails. CoWork can help create account-specific messaging, trigger-based outreach, objection handling, and call-prep workflows.</p>
+      </div>
+
+      <div class="unlock-card">
+        <div class="unlock-card-letter" style="background: var(--abn-coral);">D</div>
+        <h3>RevOps and Marketing Ops</h3>
+        <p>Ops teams often sit between fragmented systems, messy data, undocumented processes, and urgent requests from sales and marketing. CoWork helps with synthesis and documentation. Code helps when the team needs to systematize workflows, maintain structured files, or build reusable automation.</p>
+      </div>
+
+      <div class="unlock-card">
+        <div class="unlock-card-letter" style="background: var(--abn-ocean);">E</div>
+        <h3>Technical GTM Operators</h3>
+        <p>Some teams have technically capable operators who want more than chat-based assistance. They need versioned prompts, reusable workflow libraries, repo-based documentation, scripts, integrations, and governed AI systems. This is where Claude Code becomes more relevant.</p>
+      </div>
+
     </div>
   </section>
 
   <div class="section-divider"></div>
 
   <!-- Section 3 -->
-  <section id="comparison">
+  <section id="use-cases">
     <span class="section-number">03</span>
-    <h2>The Honest Comparison</h2>
-    <p>No hand-waving. Here's exactly what each tool can and can't do, as of March 2026.</p>
+    <h2>Use Cases That Expose the Difference</h2>
+    <p>The clearest way to compare CoWork and Code is through real GTM use cases.</p>
 
-    <div class="table-wrapper">
-      <table>
-        <thead>
-          <tr>
-            <th>Capability</th>
-            <th>Cowork</th>
-            <th>Code</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Interface</td>
-            <td>GUI (Desktop app)</td>
-            <td>Terminal (CLI)</td>
-          </tr>
-          <tr>
-            <td>Learning curve</td>
-            <td>Low &mdash; point and click</td>
-            <td>Medium &mdash; but not what you think</td>
-          </tr>
-          <tr>
-            <td>File access</td>
-            <td>Sandboxed folder only</td>
-            <td>Your entire file system</td>
-          </tr>
-          <tr>
-            <td>Persistent memory</td>
-            <td>Manual (memory.md workaround)</td>
-            <td>Built-in (CLAUDE.md, auto-loaded)</td>
-          </tr>
-          <tr>
-            <td>Agent system</td>
-            <td>Sub-agents (ephemeral)</td>
-            <td>Named agents with specs (persistent)</td>
-          </tr>
-          <tr>
-            <td>Skills</td>
-            <td>Plugin panel</td>
-            <td>Slash commands + skill files</td>
-          </tr>
-          <tr>
-            <td>MCP connections</td>
-            <td>Built-in connectors + config</td>
-            <td>Full MCP ecosystem + custom servers</td>
-          </tr>
-          <tr>
-            <td>Automation</td>
-            <td>Scheduled tasks (beta, unreliable)</td>
-            <td>Hooks, cron jobs, event-driven pipelines</td>
-          </tr>
-          <tr>
-            <td>Multi-step workflows</td>
-            <td>Single session</td>
-            <td>Cross-session, with handoffs and state</td>
-          </tr>
-          <tr>
-            <td>Document creation</td>
-            <td><span class="check">&#10003;</span> Native (.docx, .pptx, etc.)</td>
-            <td><span class="check">&#10003;</span> Via skills (same quality)</td>
-          </tr>
-          <tr>
-            <td>Data analysis</td>
-            <td><span class="check">&#10003;</span> Python in sandbox</td>
-            <td><span class="check">&#10003;</span> Python + any installed tool</td>
-          </tr>
-          <tr>
-            <td>Web research</td>
-            <td><span class="check">&#10003;</span> Built-in browsing</td>
-            <td><span class="check">&#10003;</span> Via MCP or web tools</td>
-          </tr>
-          <tr>
-            <td>Team collaboration</td>
-            <td>Shared via Desktop app</td>
-            <td>CLAUDE.md in git = team-wide context</td>
-          </tr>
-          <tr>
-            <td>Cost</td>
-            <td>Pro / Max / Team / Enterprise</td>
-            <td>Pro / Max / Team / Enterprise (same)</td>
-          </tr>
-        </tbody>
-      </table>
-      <div class="table-insight">
-        The biggest difference isn't technical skill required. It's whether you want a tool that helps you <strong>do</strong> work... or a system that helps you <strong>build how work gets done</strong>.
+    <div class="comparison-cards">
+      <div class="comp-card cowork">
+        <h3>CoWork Use Cases</h3>
+        <div class="card-metaphor">Turn business context into business output</div>
+        <ul>
+          <li>Strategic account briefs from CRM notes, 6sense context, website activity, transcripts, and prior sales history</li>
+          <li>Board-ready pipeline summaries from forecast notes and deal updates</li>
+          <li>Competitive battlecards from market research, win/loss notes, and sales objections</li>
+          <li>Sales call transcripts into follow-up actions, coaching notes, and deal-risk summaries</li>
+          <li>ABM campaign briefs by segment, persona, account tier, or buying stage</li>
+          <li>Long-form content repurposed into sales emails, talk tracks, and landing page copy</li>
+          <li>Leadership prep for customer meetings, partner meetings, or business reviews</li>
+        </ul>
       </div>
+
+      <div class="comp-card code">
+        <h3>Code Use Cases</h3>
+        <div class="card-metaphor">Build, maintain, and automate the workflow system</div>
+        <ul>
+          <li>Maintaining a version-controlled GTM workflow repository</li>
+          <li>Reusable prompt libraries, templates, and markdown-based playbooks</li>
+          <li>Internal research pipelines or structured account-analysis workflows</li>
+          <li>Connecting AI workflows to files, repositories, MCP servers, or other systems</li>
+          <li>Refactoring internal GTM tools, scripts, or automation logic</li>
+          <li>Repeatable sales and marketing workflows turned into reusable assets</li>
+          <li>Managing the architecture behind an AI-enabled GTM operating system</li>
+        </ul>
+      </div>
+    </div>
+
+    <p>The distinction is simple:</p>
+
+    <div class="pull-quote">
+      CoWork helps GTM teams produce better work. Code helps technical operators make that work repeatable, governed, and scalable.
     </div>
   </section>
 
   <div class="section-divider"></div>
 
   <!-- Section 4 -->
-  <section id="hidden-gem">
+  <section id="workflow-fit">
     <span class="section-number">04</span>
-    <h2>Why Code Is the Hidden Gem for Business Operators</h2>
-    <p>Four capabilities separate Code from everything else. None of them require writing code.</p>
+    <h2>Workflow and Integration Fit: Where the Work Actually Lives</h2>
+    <p>B2B sales and marketing work rarely lives in one place. It is spread across CRM records, spreadsheets, decks, call recordings, Slack conversations, Google Drive folders, product notes, competitive research, campaign data, and customer-facing content.</p>
+    <p>That is why integration fit matters.</p>
 
-    <div class="unlock-grid">
-
-      <!-- A -->
-      <div class="unlock-card">
-        <div class="unlock-card-letter">A</div>
-        <h3>CLAUDE.md = Your Business Operating System</h3>
-        <p>This isn't a config file. It's a <strong>persistent instruction set that loads automatically every session</strong>. Write your ICP definitions, competitive landscape, deal stages, naming conventions, team structure &mdash; once. Every session starts with full context.</p>
-        <p>Unlike Cowork's memory workaround (writing to a file and hoping Claude reads it), CLAUDE.md is architecturally guaranteed to load. It's the difference between a sticky note on your monitor and an operating manual hard-wired into the system.</p>
-<pre><span class="code-comment"># CLAUDE.md (loads automatically every session)</span>
-
-<span class="code-keyword">## Company</span>
-We sell patient engagement software to healthcare practices.
-Our ICP: multi-location dental, veterinary, and medical groups
-with 5-50 locations doing $10M-$200M revenue.
-
-<span class="code-keyword">## Competitors</span>
-Primary: Weave, Solutionreach, Phreesia
-Emerging: NexHealth, Luma Health, Klara
-
-<span class="code-keyword">## Deal Stages</span>
-Discovery -> Demo -> Technical Review -> Proposal -> Negotiation -> Closed
-
-<span class="code-keyword">## My Preferences</span>
-- Write in active voice, casual tone
-- Always include data points when making claims
-- Format reports as markdown with executive summary first</pre>
-      </div>
-
-      <!-- B -->
-      <div class="unlock-card">
-        <div class="unlock-card-letter">B</div>
-        <h3>Named Agents = Your AI Team</h3>
-        <p>In Cowork, sub-agents are ephemeral &mdash; they exist for one task and disappear. In Code, you define <strong>agent specs</strong>: "This is my CMO agent. Here's how it thinks about positioning. Here are the competitors it tracks. Here's its writing style."</p>
-        <p>You build the agent once. Use it forever. Refine it over time. Each agent accumulates institutional knowledge through its spec file.</p>
-        <div class="callout">
-          <div class="callout-label">From the field</div>
-          I run 80+ GTM agents &mdash; CMO, CRO, Sales Engineers, Competitive Intel Analysts, Content Writers. Each has a persistent spec. Each gets better over time. When I need a competitive battlecard, I don't start from scratch. I invoke my Competitive Intel agent and it already knows our positioning, our rivals, and my preferred format.
-        </div>
-      </div>
-
-      <!-- C -->
-      <div class="unlock-card">
-        <div class="unlock-card-letter">C</div>
-        <h3>Your File System = Your Context</h3>
-        <p>Cowork works in a sandbox. Code works in <strong>your world</strong>.</p>
-        <p>Point it at your actual pipeline export, your actual competitive folder, your actual deal notes. No uploading, no copy-pasting, no "let me share this file." It's already there.</p>
-        <p>This sounds small until you've spent 15 minutes uploading CSVs into a sandboxed environment for the third time this week. With Code, you say <em>"read the pipeline export in Downloads"</em> and it does. The files live where they've always lived.</p>
-      </div>
-
-      <!-- D -->
-      <div class="unlock-card">
-        <div class="unlock-card-letter">D</div>
-        <h3>Automation That Actually Runs</h3>
-        <p>Cowork's scheduled tasks are beta and unreliable as of March 2026. They work sometimes. They silently fail other times. You can't build a business process on "sometimes."</p>
-        <p>Code supports <strong>hooks</strong> (triggers on events), <strong>cron jobs</strong> (scheduled tasks), and <strong>full automation pipelines</strong>. Real examples running in production today:</p>
-        <ul class="showcase-list">
-          <li>Daily competitive monitoring that flags pricing changes</li>
-          <li>Automated content pipelines (trend research, draft, review, publish)</li>
-          <li>Weekly research digests synthesized from 10+ sources</li>
-          <li>Pipeline health alerts triggered by CRM webhook events</li>
-        </ul>
-      </div>
+    <div class="callout">
+      <div class="callout-label">For CoWork, the key question is</div>
+      Can business users bring enough context into the workflow to produce better decisions, messaging, and execution?
     </div>
+
+    <div class="callout gold">
+      <div class="callout-label">For Code, the key question is</div>
+      Can technical users organize, version, automate, and maintain the workflows that the business wants to reuse?
+    </div>
+
+    <p>Connectors and integrations are important, but they are only inputs. The deeper issue is whether the organization has a repeatable operating model for turning context into action. A GTM team does not just need access to data. It needs structured workflows for using that data.</p>
+
+    <ul class="showcase-list">
+      <li>Account research should become an account brief.</li>
+      <li>Call transcripts should become coaching and next steps.</li>
+      <li>Intent data should become campaign and outbound strategy.</li>
+      <li>Competitive insights should become battlecards and talk tracks.</li>
+      <li>Pipeline updates should become executive-ready narratives.</li>
+      <li>Repeatable work should become reusable workflow assets.</li>
+    </ul>
+
+    <p>CoWork is better for making these workflows accessible to business users. Code is better for turning the underlying workflow logic into a maintained system.</p>
   </section>
 
   <div class="section-divider"></div>
 
   <!-- Section 5 -->
-  <section id="not-technical">
+  <section id="buying-triggers">
     <span class="section-number">05</span>
-    <h2>"But I'm Not Technical" &mdash; Let's Kill This</h2>
-    <p>The terminal fear is real. It's also wildly overblown. Here's what "using Claude Code" actually looks like for a business operator:</p>
+    <h2>Buying Triggers, Champions, and Internal Politics</h2>
+    <p>CoWork and Code are often purchased, championed, and justified differently.</p>
 
-<pre><span class="code-prompt">$</span> claude
-
-<span class="code-prompt">></span> Read the latest pipeline export in /Users/me/Downloads
-  and tell me which deals are at risk of slipping this quarter
-
-<span class="code-comment">Claude: I'll analyze the pipeline export...</span>
-<span class="code-output">[reads file, analyzes data, produces risk assessment with
- specific deals, amounts, and recommended actions]</span>
-
-<span class="code-prompt">></span> Great. Now draft an email to Sarah with the top 3 deals
-  that need executive attention this week
-
-<span class="code-comment">Claude: Here's the draft...</span>
-<span class="code-output">[creates email draft with specific deal context, next steps,
- and suggested talking points for each deal]</span></pre>
-
-    <p>You're typing English. The terminal is just where you type it. <strong>That's it.</strong></p>
-
-    <p>Three things you need to know:</p>
-
-    <div class="steps">
-      <div class="step">
-        <div class="step-num">1</div>
-        <div class="step-content">
-          <p>Type <code class="inline-code">claude</code> to start</p>
+    <div class="comparison-cards">
+      <div class="comp-card cowork">
+        <h3>CoWork Buying Triggers</h3>
+        <div class="card-metaphor">When business teams must do more with less</div>
+        <ul>
+          <li>A CEO or board-level AI mandate</li>
+          <li>A marketing team facing flat headcount and rising output demands</li>
+          <li>A sales team struggling with rep productivity</li>
+          <li>A new ABM or enterprise-account motion</li>
+          <li>A missed forecast or weak pipeline-inspection process</li>
+          <li>Sales enablement content that is not being used</li>
+          <li>Leadership pressure to produce better reporting and business narratives</li>
+        </ul>
+        <div class="great-for">
+          <strong>Likely champions</strong>
+          CMO, CRO, VP Sales, VP Marketing, RevOps leader, sales enablement leader, GTM strategy leader.
         </div>
       </div>
-      <div class="step">
-        <div class="step-num">2</div>
-        <div class="step-content">
-          <p>Type what you want in plain English</p>
-        </div>
-      </div>
-      <div class="step">
-        <div class="step-num">3</div>
-        <div class="step-content">
-          <p>Type <code class="inline-code">/help</code> if you get stuck</p>
+
+      <div class="comp-card code">
+        <h3>Code Buying Triggers</h3>
+        <div class="card-metaphor">When experimentation becomes infrastructure</div>
+        <ul>
+          <li>Technical teams already using agentic coding tools</li>
+          <li>A need to maintain AI workflows in repositories</li>
+          <li>A desire for version control and governance</li>
+          <li>A growing library of prompts, templates, and playbooks</li>
+          <li>Internal tools or automation backlogs</li>
+          <li>A need to connect AI workflows to technical systems</li>
+          <li>A push to build a durable GTM operating system</li>
+        </ul>
+        <div class="great-for">
+          <strong>Likely champions</strong>
+          Engineering leader, RevOps architect, AI operations lead, technical marketing or growth ops leader, GTM systems consultant, product or platform team.
         </div>
       </div>
     </div>
 
-    <div class="callout gold">
-      <div class="callout-label">Reality check</div>
-      That's the entire technical requirement. If you can use a search bar, you can use Claude Code. The learning curve is about 15 minutes &mdash; and every minute you invest pays compound returns because your context, agents, and workflows persist forever.
-    </div>
+    <p>The internal politics matter. CoWork is usually easier to introduce as a productivity and workflow tool for business teams. Code usually requires a more technical champion and a clearer architecture story.</p>
   </section>
 
   <div class="section-divider"></div>
 
   <!-- Section 6 -->
-  <section id="decision-matrix">
+  <section id="roi">
     <span class="section-number">06</span>
-    <h2>The Decision Matrix: When to Use Each</h2>
-    <p>This isn't either/or. It's about matching the tool to the task.</p>
+    <h2>ROI and the CFO Conversation</h2>
+    <p>The CFO conversation should not be limited to &ldquo;hours saved.&rdquo; That is too narrow. The stronger ROI case is that AI reduces expensive knowledge-work friction while improving consistency, speed, reuse, and governance.</p>
 
-    <div class="decision-grid">
-      <div class="decision-card cowork-decision">
-        <div class="label-tag">Use Cowork When</div>
-        <ul>
-          <li>You need a quick document (battlecard, deck, report)</li>
-          <li>You're analyzing a one-off dataset</li>
-          <li>You want visual progress tracking</li>
-          <li>You're exploring what AI can do (lower stakes)</li>
-          <li>You need built-in connectors with zero setup</li>
-          <li>The task is self-contained (starts and ends in one session)</li>
-        </ul>
-      </div>
+    <h3>Time Reclaimed</h3>
+    <p>CoWork can reduce time spent on manual summaries, account research, campaign briefs, deck creation, call debriefs, and executive reporting. Code can reduce time spent recreating workflows, maintaining scattered assets, building repetitive scripts, and manually managing technical GTM infrastructure.</p>
 
-      <div class="decision-card code-decision">
-        <div class="label-tag">Use Code When</div>
-        <ul>
-          <li>You're building repeatable workflows</li>
-          <li>You want persistent context across every session</li>
-          <li>You need to work with files already on your machine</li>
-          <li>You're building an agent system (even just 1-2 agents)</li>
-          <li>You want automation that runs on a schedule</li>
-          <li>The work spans multiple sessions</li>
-          <li>You want team-wide shared context (CLAUDE.md in git)</li>
-        </ul>
-      </div>
+    <h3>Quality Lift</h3>
+    <p>CoWork can improve the quality of account insights, messaging, campaign strategy, sales preparation, and executive communication. Code can improve the quality and consistency of the underlying workflow system.</p>
 
-      <div class="decision-card use-both">
-        <div class="label-tag">The Power Move: Use Both</div>
-        <ul>
-          <li>Cowork for quick document creation and visual tasks</li>
-          <li>Code for the operating system underneath &mdash; context, agents, automation</li>
-          <li>Same model, same plans, same core capabilities</li>
-          <li>The real power users treat Cowork as a tool and Code as the system</li>
-        </ul>
-      </div>
+    <h3>Cycle-Time Reduction</h3>
+    <p>CoWork can help teams move faster from research to output. Code can help teams move faster from one-off workflow to reusable system.</p>
+
+    <h3>Reuse and Leverage</h3>
+    <p>The biggest ROI comes when AI work stops being disposable. A one-time account brief has value. A repeatable account-brief workflow has more value. A governed, versioned, reusable account-intelligence system has even more value.</p>
+
+    <h3>Risk Reduction</h3>
+    <p>Unmanaged AI usage creates risk: inconsistent outputs, hallucinated claims, security concerns, poor documentation, and lack of review. CoWork can help keep humans in the review loop. Code can help create more structured governance through files, repositories, version control, and documented workflows.</p>
+
+    <div class="pull-quote">
+      AI creates value when it turns scattered knowledge work into faster, better, more repeatable execution &mdash; without creating unmanaged operational risk.
     </div>
   </section>
 
   <div class="section-divider"></div>
 
   <!-- Section 7 -->
-  <section id="getting-started">
+  <section id="decision-guide">
     <span class="section-number">07</span>
-    <h2>Getting Started: Your First 15 Minutes with Code</h2>
-    <p>Step by step, for someone who has never opened a terminal.</p>
+    <h2>Decision Guide: CoWork, Code, or Both</h2>
+    <p>The practical answer is not always either/or. For most B2B sales and marketing organizations, the better framing is sequencing.</p>
 
-    <div class="steps">
-      <div class="step">
-        <div class="step-num">1</div>
-        <div class="step-content">
-          <p><strong>Open Terminal.</strong> Press <code class="inline-code">Cmd + Space</code>, type "Terminal", hit Enter.</p>
-        </div>
+    <div class="decision-grid">
+      <div class="decision-card cowork-decision">
+        <div class="label-tag">Start with CoWork when</div>
+        <ul>
+          <li>The users are sales, marketing, enablement, RevOps, or leadership teams</li>
+          <li>The main need is research, synthesis, messaging, planning, reporting, or workflow execution</li>
+          <li>The organization wants business users to adopt AI without requiring technical expertise</li>
+          <li>The team needs immediate productivity gains</li>
+          <li>The work is still being discovered, tested, and refined</li>
+        </ul>
       </div>
-      <div class="step">
-        <div class="step-num">2</div>
-        <div class="step-content">
-          <p><strong>Install Claude Code.</strong> Paste this and hit Enter:</p>
-          <pre>npm install -g @anthropic-ai/claude-code</pre>
-          <p>One command, one time. (You'll need Node.js installed &mdash; <a href="https://nodejs.org" target="_blank" rel="noopener" style="color: var(--abn-ocean);">download it here</a> if you don't have it.)</p>
-        </div>
+
+      <div class="decision-card code-decision">
+        <div class="label-tag">Start with Code when</div>
+        <ul>
+          <li>The users are developers, RevOps architects, AI operators, or technical GTM builders</li>
+          <li>The organization wants to build durable workflow infrastructure</li>
+          <li>The team needs version control, file structure, automation, or repo-based management</li>
+          <li>The use case involves maintaining prompts, templates, playbooks, scripts, or internal systems</li>
+          <li>The organization is ready to systematize AI workflows</li>
+        </ul>
       </div>
-      <div class="step">
-        <div class="step-num">3</div>
-        <div class="step-content">
-          <p><strong>Navigate to your work folder:</strong></p>
-          <pre>cd ~/Documents/GTM</pre>
-          <p>Replace with whatever folder holds your work files. Or just use your home directory.</p>
-        </div>
-      </div>
-      <div class="step">
-        <div class="step-num">4</div>
-        <div class="step-content">
-          <p><strong>Start Claude:</strong></p>
-          <pre>claude</pre>
-        </div>
-      </div>
-      <div class="step">
-        <div class="step-num">5</div>
-        <div class="step-content">
-          <p><strong>Build your operating system.</strong> Type your first prompt:</p>
-<pre>"Create a CLAUDE.md file with my business context.
-I'm a [your role] at [your company].
-Our ICP is [describe your ideal customer].
-Our main competitors are [list them].
-Our deal stages are [list them]."</pre>
-        </div>
-      </div>
-      <div class="step">
-        <div class="step-num">6</div>
-        <div class="step-content">
-          <p><strong>Watch Claude create your persistent operating system.</strong> It generates a CLAUDE.md file that will load automatically in every future session.</p>
-        </div>
-      </div>
-      <div class="step">
-        <div class="step-num">7</div>
-        <div class="step-content">
-          <p><strong>Every future session:</strong> just type <code class="inline-code">claude</code> and it already knows everything. No re-explaining. No re-uploading. No starting over.</p>
-        </div>
+
+      <div class="decision-card use-both">
+        <div class="label-tag">Use Both when</div>
+        <ul>
+          <li>Business users need an accessible front end for GTM work</li>
+          <li>Technical operators need to maintain the workflow architecture behind the scenes</li>
+          <li>The organization wants to move from AI experimentation to an AI-enabled operating system</li>
+          <li>Sales and marketing teams need repeatable workflows, not just one-off AI outputs</li>
+          <li>Governance, reuse, and scale matter</li>
+        </ul>
       </div>
     </div>
 
-    <div class="callout">
-      <div class="callout-label">Total investment</div>
-      About 5 minutes to install. About 10 minutes to build your first CLAUDE.md. Technical skill required: knowing how to open Terminal and paste a command. Every session after that starts instantly with full context.
+    <h3>A simple maturity model</h3>
+    <div class="table-wrapper">
+      <table>
+        <thead>
+          <tr>
+            <th>Stage</th>
+            <th>Primary Need</th>
+            <th>Best Fit</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Experimenting</td>
+            <td>Try AI on real GTM tasks</td>
+            <td>CoWork</td>
+          </tr>
+          <tr>
+            <td>Adopting</td>
+            <td>Standardize repeatable sales and marketing workflows</td>
+            <td>CoWork</td>
+          </tr>
+          <tr>
+            <td>Scaling</td>
+            <td>Govern prompts, files, workflows, and context</td>
+            <td>CoWork + Code</td>
+          </tr>
+          <tr>
+            <td>Operating System</td>
+            <td>Build versioned GTM workflow infrastructure</td>
+            <td>Code + CoWork</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="table-insight">
+        CoWork is the adoption layer. Code is the architecture layer. CoWork helps GTM teams do the work. Code helps technical operators turn that work into a system.
+      </div>
     </div>
-  </section>
-
-  <div class="section-divider"></div>
-
-  <!-- Section 8 -->
-  <section id="what-i-built">
-    <span class="section-number">08</span>
-    <h2>What I Built (And You Can Too)</h2>
-    <p>I'm an EVP Growth &amp; Operations. Not an engineer. Here's what I've built with Claude Code over the past few months:</p>
-
-    <ul class="showcase-list">
-      <li><strong>80+ GTM agents</strong> &mdash; CMO, CRO, Sales Engineers, Content Writers, Competitive Intel Analysts, each with persistent specs that improve over time</li>
-      <li><strong>Automated daily content pipeline</strong> &mdash; trend research, content generation, editorial review, all running without manual intervention</li>
-      <li><strong>Healthcare dashboard suite</strong> deployed to Vercel &mdash; live web applications, not mockups</li>
-      <li><strong>Competitive monitoring automation</strong> &mdash; daily scans, pricing change alerts, market movement reports</li>
-      <li><strong>Full marketing strategy packages</strong> generated on demand &mdash; SEO, demand gen, content strategy, paid media plans, sales enablement</li>
-      <li><strong>Knowledge graph with cross-session memory</strong> &mdash; a persistent operating system that gets smarter every session</li>
-    </ul>
-
-    <div class="pull-quote">
-      None of this required writing code. It required describing what I wanted and letting Claude build it.
-    </div>
-
-    <p>The compound effect is what matters. Every agent I define, every workflow I build, every piece of context I add to CLAUDE.md &mdash; it all persists. Tomorrow's session starts where today's left off. Next month's session has the benefit of everything I've built since day one.</p>
-    <p>Cowork resets every time. Code accumulates.</p>
   </section>
 
   <!-- CTA -->
   <section class="cta-section">
-    <h2>Stop Missing the Biggest AI Unlock of 2026</h2>
-    <p>Code and Cowork are available now on Pro, Max, Team, and Enterprise plans. The only question is whether you want a tool or a system.</p>
+    <h2>Turn GTM Work Into a Repeatable System</h2>
+    <p>CoWork is the adoption layer. Code is the architecture layer. The right starting point depends on where your team is today.</p>
     <div class="cta-buttons">
-      <a href="https://www.aibusinessnetwork.ai/" target="_blank" rel="noopener" class="btn btn-primary">
+      <a href="https://www.b2bfusiongroup.com/" target="_blank" rel="noopener" class="btn btn-primary">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
-        AI Business Network
-      </a>
-      <a href="https://www.aibusinessnetwork.ai/" target="_blank" rel="noopener" class="btn btn-secondary">
-        GTM AI Academy
+        B2B Fusion
       </a>
     </div>
   </section>
@@ -1277,7 +1173,7 @@ Our deal stages are [list them]."</pre>
 
 <footer>
   <div class="container">
-    <p>Written by <a href="https://www.linkedin.com/in/jonathandavidmoss/" target="_blank" rel="noopener">Jonathan Moss</a> &middot; <a href="https://www.aibusinessnetwork.ai/" target="_blank" rel="noopener">AI Business Network</a> &middot; March 2026</p>
+    <p>By <a href="https://www.b2bfusiongroup.com/" target="_blank" rel="noopener">Jon Russo</a> &middot; B2B Fusion</p>
   </div>
 </footer>
 
