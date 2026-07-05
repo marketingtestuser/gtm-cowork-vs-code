@@ -1,6 +1,6 @@
 # gtm-cowork-vs-code
 
-**Claude CoWork vs Claude Code for B2B Sales and Marketing Teams** — a single-page
+**Claude Cowork vs Claude Code for B2B Sales and Marketing Teams** — a single-page
 guide by **Jon Russo / B2B Fusion**, hosted on Vercel with auto-deploy from this repo.
 
 ## Contents

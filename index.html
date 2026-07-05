@@ -3,9 +3,26 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Claude CoWork vs Claude Code for B2B Sales and Marketing Teams</title>
-<meta name="description" content="A practical guide for B2B sales and marketing teams on when to use Claude CoWork vs Claude Code — by persona, use case, integration fit, buying trigger, ROI, and a clear decision framework.">
+<title>Claude Cowork vs Claude Code for B2B Sales and Marketing Teams</title>
+<meta name="description" content="A practical guide for B2B sales and marketing teams on when to use Claude Cowork vs Claude Code — by persona, use case, buying trigger, ROI, and a clear decision framework.">
 <meta name="author" content="Jon Russo">
+<link rel="canonical" href="https://gtm-cowork-vs-code.vercel.app/">
+
+<!-- Open Graph -->
+<meta property="og:type" content="article">
+<meta property="og:title" content="Claude Cowork vs Claude Code for B2B Sales and Marketing Teams">
+<meta property="og:description" content="Same intelligence, two operating layers. A practical guide to choosing the right one — by persona, use case, buying trigger, and ROI.">
+<meta property="og:url" content="https://gtm-cowork-vs-code.vercel.app/">
+<meta property="og:site_name" content="B2B Fusion">
+<meta property="article:author" content="Jon Russo">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Claude Cowork vs Claude Code for B2B Sales and Marketing Teams">
+<meta name="twitter:description" content="Same intelligence, two operating layers. A practical guide to choosing the right one — by persona, use case, buying trigger, and ROI.">
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%A7%AD%3C/text%3E%3C/svg%3E">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -29,7 +46,7 @@
     --raised: #1a1438;
     --text-primary: #f0f0f5;
     --text-secondary: rgba(240,240,245,0.65);
-    --text-muted: rgba(240,240,245,0.38);
+    --text-muted: rgba(240,240,245,0.55);
     --border: rgba(255,255,255,0.08);
     --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     --font-mono: 'JetBrains Mono', 'Fira Code', 'Consolas', monospace;
@@ -160,6 +177,63 @@
   .author-name { font-weight: 600; font-size: 15px; }
   .author-title { font-size: 13px; color: var(--text-muted); }
 
+  .pub-date {
+    font-size: 13px;
+    color: var(--text-muted);
+    margin-bottom: 32px;
+  }
+
+  .hero-ctas {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  /* Verdict box */
+  .verdict {
+    background: var(--card);
+    border: 1px solid rgba(243,29,213,0.2);
+    border-radius: 16px;
+    padding: 32px;
+    margin: 0 0 40px;
+  }
+
+  .verdict-label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #c084fc;
+    margin-bottom: 20px;
+  }
+
+  .verdict-row {
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+    padding: 12px 0;
+  }
+  .verdict-row + .verdict-row { border-top: 1px solid var(--border); }
+
+  .verdict-tag {
+    flex-shrink: 0;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 4px 10px;
+    border-radius: 6px;
+    margin-top: 3px;
+    min-width: 92px;
+    text-align: center;
+  }
+  .verdict-tag.cowork { background: rgba(53,160,196,0.15); color: var(--abn-ocean); }
+  .verdict-tag.code { background: rgba(252,78,153,0.15); color: var(--abn-pink); }
+  .verdict-tag.both { background: linear-gradient(135deg, rgba(243,29,213,0.2), rgba(115,119,255,0.2)); color: #c084fc; }
+
+  .verdict-row p { margin: 0; font-size: 15px; }
+
   /* TOC */
   .toc {
     background: var(--card);
@@ -247,10 +321,11 @@
   p { margin-bottom: 20px; color: var(--text-secondary); }
   p strong { color: var(--text-primary); font-weight: 600; }
 
-  /* Highlight text */
-  .highlight {
-    color: var(--abn-coral);
-    font-weight: 600;
+  /* Layer diagram */
+  .layer-diagram {
+    margin: 32px auto;
+    max-width: 560px;
+    display: block;
   }
 
   /* Side by side cards */
@@ -286,11 +361,6 @@
   .comp-card.cowork::before { background: var(--abn-gradient-blue-teal); }
   .comp-card.code::before { background: var(--abn-gradient-pink-purple); }
 
-  .comp-card-icon {
-    font-size: 28px;
-    margin-bottom: 12px;
-  }
-
   .comp-card h3 {
     margin-top: 0;
     margin-bottom: 8px;
@@ -307,6 +377,20 @@
   }
 
   .comp-card.code .card-metaphor { color: var(--abn-pink); }
+
+  .comp-card .what-it-is {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: 16px;
+  }
+  .comp-card .what-it-is strong {
+    color: var(--text-primary);
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: block;
+    margin-bottom: 4px;
+  }
 
   .comp-card ul {
     list-style: none;
@@ -397,9 +481,6 @@
   tbody tr:last-child td { border-bottom: none; }
   tbody tr:hover { background: rgba(255,255,255,0.02); }
 
-  .check { color: var(--abn-mint); }
-  .x-mark { color: rgba(240,240,245,0.2); }
-
   .table-insight {
     background: linear-gradient(135deg, rgba(243,29,213,0.06), rgba(115,119,255,0.06));
     border-top: 1px solid rgba(243,29,213,0.15);
@@ -410,7 +491,7 @@
     font-weight: 500;
   }
 
-  /* Feature cards (unlock section) */
+  /* Feature cards (persona section) */
   .unlock-grid {
     display: grid;
     gap: 24px;
@@ -439,44 +520,22 @@
     margin-bottom: 16px;
   }
 
-  .unlock-card:nth-child(1) .unlock-card-letter { background: var(--abn-royal); }
-  .unlock-card:nth-child(2) .unlock-card-letter { background: var(--abn-pink); }
-  .unlock-card:nth-child(3) .unlock-card-letter { background: var(--abn-mint); color: var(--abn-dark); }
-  .unlock-card:nth-child(4) .unlock-card-letter { background: var(--abn-coral); }
-
   .unlock-card h3 { margin-top: 0; }
 
-  /* Code blocks */
-  pre {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    padding: 20px 24px;
-    overflow-x: auto;
-    margin: 20px 0;
-    font-family: var(--font-mono);
-    font-size: 13.5px;
-    line-height: 1.7;
-    color: var(--text-secondary);
-  }
-
-  code {
-    font-family: var(--font-mono);
-    font-size: 0.9em;
-  }
-
-  .inline-code {
-    background: rgba(255,255,255,0.06);
-    padding: 2px 7px;
-    border-radius: 5px;
+  .unlock-card .graduates {
+    margin-top: 16px;
+    padding-top: 14px;
+    border-top: 1px solid var(--border);
     font-size: 14px;
-    color: var(--abn-teal);
+    color: var(--text-secondary);
+    margin-bottom: 0;
   }
-
-  .code-prompt { color: var(--abn-mint); }
-  .code-comment { color: var(--text-muted); font-style: italic; }
-  .code-output { color: var(--text-secondary); }
-  .code-keyword { color: var(--abn-ocean); }
+  .unlock-card .graduates strong {
+    color: var(--abn-pink);
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
 
   /* Callout boxes */
   .callout {
@@ -586,50 +645,6 @@
   .decision-card.code-decision li::before { background: var(--abn-pink); }
   .decision-card.use-both li::before { background: linear-gradient(90deg, #f31dd5, #7377ff); }
 
-  /* Steps */
-  .steps {
-    margin: 32px 0;
-    counter-reset: step-counter;
-  }
-
-  .step {
-    counter-increment: step-counter;
-    display: flex;
-    gap: 20px;
-    margin-bottom: 20px;
-    align-items: flex-start;
-  }
-
-  .step-num {
-    flex-shrink: 0;
-    width: 36px;
-    height: 36px;
-    border-radius: 10px;
-    background: var(--raised);
-    border: 1px solid var(--border);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: var(--font-mono);
-    font-size: 14px;
-    font-weight: 700;
-    color: var(--abn-ocean);
-  }
-
-  .step-content {
-    flex: 1;
-    padding-top: 6px;
-  }
-
-  .step-content p {
-    margin-bottom: 8px;
-    font-size: 15px;
-  }
-
-  .step-content code.inline-code {
-    font-size: 13px;
-  }
-
   /* Showcase list */
   .showcase-list {
     list-style: none;
@@ -691,7 +706,7 @@
     margin-bottom: 12px;
   }
 
-  .cta-section p { max-width: 500px; margin: 0 auto 32px; }
+  .cta-section p { max-width: 520px; margin: 0 auto 32px; }
 
   .cta-buttons {
     display: flex;
@@ -759,11 +774,11 @@
     .hero { padding: 56px 0 40px; }
     h1 { letter-spacing: -0.02em; }
     .toc { padding: 24px; }
+    .verdict { padding: 24px; }
+    .verdict-row { flex-direction: column; gap: 8px; }
     section { margin-bottom: 56px; }
     .comp-card { padding: 22px; }
     .unlock-card { padding: 24px; }
-    pre { padding: 16px; font-size: 12.5px; }
-    .step { gap: 14px; }
     .top-bar .tagline { display: none; }
     .author-row { flex-direction: column; text-align: center; }
     .author-info { text-align: center; }
@@ -805,8 +820,8 @@
   <!-- Hero -->
   <header class="hero">
     <div class="badge">For B2B Sales &amp; Marketing Teams</div>
-    <h1>Claude CoWork vs Claude Code for B2B Sales and Marketing Teams</h1>
-    <p class="subtitle">Same underlying intelligence, two different operating environments. A practical guide to choosing the right layer &mdash; by persona, use case, buying trigger, and ROI.</p>
+    <h1>Claude Cowork vs. Claude Code</h1>
+    <p class="subtitle">Same underlying intelligence, two different operating layers. A practical guide for B2B sales and marketing teams &mdash; by persona, use case, buying trigger, and ROI.</p>
     <div class="author-row">
       <div class="avatar" aria-hidden="true">JR</div>
       <div class="author-info">
@@ -814,7 +829,29 @@
         <div class="author-title">B2B Fusion</div>
       </div>
     </div>
+    <p class="pub-date">Updated July 2026</p>
+    <div class="hero-ctas">
+      <a href="https://b2bfusiongroup.com/contact-us/" target="_blank" rel="noopener" class="btn btn-primary">Book a free consultation</a>
+      <a href="https://www.linkedin.com/company/b2bfusion/" target="_blank" rel="noopener" class="btn btn-secondary">Follow on LinkedIn</a>
+    </div>
   </header>
+
+  <!-- 30-second answer -->
+  <div class="verdict">
+    <div class="verdict-label">The 30-Second Answer</div>
+    <div class="verdict-row">
+      <span class="verdict-tag cowork">Cowork</span>
+      <p>Your sales, marketing, or RevOps team wants better output from the context it already has &mdash; briefs, battlecards, campaign plans, reporting. Start here. No technical skills required.</p>
+    </div>
+    <div class="verdict-row">
+      <span class="verdict-tag code">Code</span>
+      <p>You have a technical operator and you want versioned, governed, automated workflow infrastructure &mdash; prompt libraries, pipelines, repo-based playbooks. Start here.</p>
+    </div>
+    <div class="verdict-row">
+      <span class="verdict-tag both">Sequence</span>
+      <p>Most B2B GTM organizations should adopt Cowork first, then add Code once specific workflows have proven their value and are worth systematizing.</p>
+    </div>
+  </div>
 
   <!-- TOC -->
   <nav class="toc" aria-label="Table of contents">
@@ -823,10 +860,9 @@
       <li><a href="#divide">The Divide: Business Workflow vs Technical Operating Environment</a></li>
       <li><a href="#personas">Pain Points by Persona</a></li>
       <li><a href="#use-cases">Use Cases That Expose the Difference</a></li>
-      <li><a href="#workflow-fit">Workflow and Integration Fit: Where the Work Actually Lives</a></li>
       <li><a href="#buying-triggers">Buying Triggers, Champions, and Internal Politics</a></li>
       <li><a href="#roi">ROI and the CFO Conversation</a></li>
-      <li><a href="#decision-guide">Decision Guide: CoWork, Code, or Both</a></li>
+      <li><a href="#decision-guide">Decision Guide: Cowork, Code, or Both</a></li>
     </ol>
   </nav>
 
@@ -834,17 +870,18 @@
   <section id="divide">
     <span class="section-number">01</span>
     <h2>The Divide: Business Workflow vs Technical Operating Environment</h2>
-    <p>Claude CoWork and Claude Code may share underlying intelligence, but they are built for different operating environments.</p>
+    <p>Claude Cowork and Claude Code run on the same Claude models. What differs is the operating environment &mdash; and who it is built for.</p>
 
     <div class="comparison-cards">
       <div class="comp-card cowork">
-        <h3>Claude CoWork</h3>
-        <div class="card-metaphor">The business-user layer</div>
+        <h3>Claude Cowork</h3>
+        <div class="card-metaphor">The adoption layer</div>
+        <p class="what-it-is"><strong>What it is</strong> A desktop app where business users hand Claude real work &mdash; files, folders, and connected tools like CRM, Slack, and Drive. No terminal, no setup beyond connecting your tools.</p>
         <ul>
           <li>Built for sales, marketing, RevOps, enablement, and leadership</li>
           <li>Turns scattered context into usable work</li>
-          <li>Briefs, reports, messaging, summaries, and plans</li>
-          <li>Repeatable workflows for business users</li>
+          <li>Produces briefs, reports, messaging, summaries, and plans</li>
+          <li>Runs ready-made skills and workflows without technical setup</li>
         </ul>
         <div class="great-for">
           <strong>Best when</strong>
@@ -854,11 +891,12 @@
 
       <div class="comp-card code">
         <h3>Claude Code</h3>
-        <div class="card-metaphor">The technical operating layer</div>
+        <div class="card-metaphor">The architecture layer</div>
+        <p class="what-it-is"><strong>What it is</strong> An agentic command-line tool that lives where technical work lives: repositories, version control, scripts, and automation. It builds and maintains systems.</p>
         <ul>
           <li>Built for developers, RevOps builders, and AI operators</li>
           <li>Works inside files, repositories, and codebases</li>
-          <li>Powers workflow systems and automation</li>
+          <li>Powers pipelines, integrations, and automation</li>
           <li>Creates durable, governed infrastructure</li>
         </ul>
         <div class="great-for">
@@ -868,13 +906,37 @@
       </div>
     </div>
 
-    <p>The core question is not which product is &ldquo;better.&rdquo; The core question is:</p>
+    <svg class="layer-diagram" viewBox="0 0 560 250" role="img" aria-label="Diagram: Claude Cowork is the adoption layer for business users, sitting on Claude Code, the architecture layer for technical operators, both running on the same Claude models.">
+      <defs>
+        <linearGradient id="grad-cowork" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0" stop-color="#2867ec"/><stop offset="1" stop-color="#1b8190"/>
+        </linearGradient>
+        <linearGradient id="grad-code" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0" stop-color="#f31dd5"/><stop offset="1" stop-color="#7377ff"/>
+        </linearGradient>
+      </defs>
+      <rect x="10" y="12" width="430" height="64" rx="14" fill="rgba(40,103,236,0.10)" stroke="url(#grad-cowork)" stroke-width="1.5"/>
+      <text x="34" y="40" font-family="Inter, sans-serif" font-size="17" font-weight="700" fill="#f0f0f5">Claude Cowork</text>
+      <text x="34" y="62" font-family="Inter, sans-serif" font-size="12.5" fill="rgba(240,240,245,0.65)">Business users execute GTM work</text>
+      <text x="452" y="48" font-family="JetBrains Mono, monospace" font-size="11" letter-spacing="1" fill="#35a0c4">ADOPTION</text>
+
+      <rect x="10" y="90" width="430" height="64" rx="14" fill="rgba(243,29,213,0.08)" stroke="url(#grad-code)" stroke-width="1.5"/>
+      <text x="34" y="118" font-family="Inter, sans-serif" font-size="17" font-weight="700" fill="#f0f0f5">Claude Code</text>
+      <text x="34" y="140" font-family="Inter, sans-serif" font-size="12.5" fill="rgba(240,240,245,0.65)">Technical operators build &amp; govern the system</text>
+      <text x="452" y="126" font-family="JetBrains Mono, monospace" font-size="11" letter-spacing="1" fill="#fc4e99">ARCHITECTURE</text>
+
+      <rect x="10" y="168" width="430" height="56" rx="14" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.14)" stroke-width="1.5" stroke-dasharray="5 4"/>
+      <text x="34" y="201" font-family="Inter, sans-serif" font-size="14" font-weight="600" fill="rgba(240,240,245,0.65)">Same Claude models underneath</text>
+      <text x="452" y="200" font-family="JetBrains Mono, monospace" font-size="11" letter-spacing="1" fill="rgba(240,240,245,0.45)">MODELS</text>
+    </svg>
+
+    <p>The pattern I see across B2B GTM teams is consistent: the tooling conversation starts as &ldquo;which product is better?&rdquo; and stalls there. The teams that get value skip that debate and ask a different question first:</p>
 
     <div class="pull-quote">
       Is the team trying to execute better GTM work, or is it trying to build and maintain the system that makes that work repeatable?
     </div>
 
-    <p>For most B2B sales and marketing teams, CoWork is the easier adoption layer. Code becomes more valuable when the organization needs <strong>architecture, version control, automation, and durable workflow infrastructure</strong>.</p>
+    <p>For most B2B sales and marketing teams, Cowork is the easier entry point. Code becomes valuable when the organization needs <strong>architecture, version control, automation, and durable workflow infrastructure</strong>.</p>
   </section>
 
   <div class="section-divider"></div>
@@ -883,38 +945,41 @@
   <section id="personas">
     <span class="section-number">02</span>
     <h2>Pain Points by Persona</h2>
-    <p>The right product choice starts with the pain point.</p>
+    <p>The right product choice starts with the pain point &mdash; and with knowing when a team outgrows its starting point.</p>
 
     <div class="unlock-grid">
 
       <div class="unlock-card">
         <div class="unlock-card-letter" style="background: var(--abn-royal);">A</div>
         <h3>Sales Leaders</h3>
-        <p>Sales teams often struggle with shallow account research, inconsistent messaging, poor call preparation, and pipeline reviews that rely too heavily on rep narrative. CoWork can help turn CRM notes, call transcripts, intent signals, and account history into better account briefs, deal summaries, and coaching inputs.</p>
+        <p>Shallow account research, inconsistent messaging, poor call preparation, and pipeline reviews that rely too heavily on rep narrative. Cowork turns CRM notes, call transcripts, intent signals, and account history into account briefs, deal summaries, and coaching inputs.</p>
+        <p class="graduates"><strong>Graduates to Code</strong> when a winning account-brief format deserves to become a versioned, team-wide workflow instead of a per-rep habit.</p>
       </div>
 
       <div class="unlock-card">
         <div class="unlock-card-letter" style="background: var(--abn-pink);">B</div>
         <h3>Marketing Leaders</h3>
-        <p>Marketing teams often have plenty of content and data but lack a clear way to turn it into segment-specific campaigns, persona messaging, sales plays, and executive-ready narratives. CoWork can help synthesize market research, content libraries, campaign performance, and buyer insights into actionable GTM output.</p>
+        <p>Plenty of content and data, but no fast path from there to segment-specific campaigns, persona messaging, sales plays, and executive-ready narratives. Cowork synthesizes market research, content libraries, campaign performance, and buyer insights into actionable GTM output.</p>
+        <p class="graduates"><strong>Graduates to Code</strong> when campaign workflows need governed templates and automated refresh instead of copy-paste reuse.</p>
       </div>
 
       <div class="unlock-card">
         <div class="unlock-card-letter" style="background: var(--abn-mint); color: var(--abn-dark);">C</div>
         <h3>SDR / BDR Teams</h3>
-        <p>Outbound teams often waste time researching accounts and still produce generic emails. CoWork can help create account-specific messaging, trigger-based outreach, objection handling, and call-prep workflows.</p>
+        <p>Hours lost researching accounts &mdash; and the emails still read generic. Cowork produces account-specific messaging, trigger-based outreach, objection handling, and call prep in minutes rather than mornings.</p>
+        <p class="graduates"><strong>Graduates to Code</strong> when trigger-based outreach becomes a pipeline that should run and be maintained as a system, not re-created rep by rep.</p>
       </div>
 
       <div class="unlock-card">
         <div class="unlock-card-letter" style="background: var(--abn-coral);">D</div>
         <h3>RevOps and Marketing Ops</h3>
-        <p>Ops teams often sit between fragmented systems, messy data, undocumented processes, and urgent requests from sales and marketing. CoWork helps with synthesis and documentation. Code helps when the team needs to systematize workflows, maintain structured files, or build reusable automation.</p>
+        <p>Fragmented systems, messy data, undocumented processes, and urgent requests from sales and marketing. Cowork handles the synthesis and documentation. Code takes over when the team needs to systematize workflows, maintain structured files, or build reusable automation.</p>
       </div>
 
       <div class="unlock-card">
         <div class="unlock-card-letter" style="background: var(--abn-ocean);">E</div>
         <h3>Technical GTM Operators</h3>
-        <p>Some teams have technically capable operators who want more than chat-based assistance. They need versioned prompts, reusable workflow libraries, repo-based documentation, scripts, integrations, and governed AI systems. This is where Claude Code becomes more relevant.</p>
+        <p>Some teams have technically capable operators who want more than chat-based assistance: versioned prompts, reusable workflow libraries, repo-based documentation, scripts, integrations, and governed AI systems. This is Claude Code territory from day one.</p>
       </div>
 
     </div>
@@ -922,15 +987,15 @@
 
   <div class="section-divider"></div>
 
-  <!-- Section 3 -->
+  <!-- Section 3 (use cases + where the work lives) -->
   <section id="use-cases">
     <span class="section-number">03</span>
     <h2>Use Cases That Expose the Difference</h2>
-    <p>The clearest way to compare CoWork and Code is through real GTM use cases.</p>
+    <p>The clearest way to compare Cowork and Code is through real GTM use cases.</p>
 
     <div class="comparison-cards">
       <div class="comp-card cowork">
-        <h3>CoWork Use Cases</h3>
+        <h3>Cowork Use Cases</h3>
         <div class="card-metaphor">Turn business context into business output</div>
         <ul>
           <li>Strategic account briefs from CRM notes, 6sense context, website activity, transcripts, and prior sales history</li>
@@ -948,43 +1013,18 @@
         <div class="card-metaphor">Build, maintain, and automate the workflow system</div>
         <ul>
           <li>Maintaining a version-controlled GTM workflow repository</li>
-          <li>Reusable prompt libraries, templates, and markdown-based playbooks</li>
-          <li>Internal research pipelines or structured account-analysis workflows</li>
-          <li>Connecting AI workflows to files, repositories, MCP servers, or other systems</li>
-          <li>Refactoring internal GTM tools, scripts, or automation logic</li>
-          <li>Repeatable sales and marketing workflows turned into reusable assets</li>
+          <li>Turning proven one-off prompts into versioned, shared workflow assets</li>
+          <li>Internal research pipelines and structured account-analysis workflows</li>
+          <li>Connecting AI workflows to files, repositories, MCP servers, and other systems</li>
+          <li>Refactoring internal GTM tools, scripts, and automation logic</li>
+          <li>Building markdown-based playbooks and template libraries the whole team inherits</li>
           <li>Managing the architecture behind an AI-enabled GTM operating system</li>
         </ul>
       </div>
     </div>
 
-    <p>The distinction is simple:</p>
-
-    <div class="pull-quote">
-      CoWork helps GTM teams produce better work. Code helps technical operators make that work repeatable, governed, and scalable.
-    </div>
-  </section>
-
-  <div class="section-divider"></div>
-
-  <!-- Section 4 -->
-  <section id="workflow-fit">
-    <span class="section-number">04</span>
-    <h2>Workflow and Integration Fit: Where the Work Actually Lives</h2>
-    <p>B2B sales and marketing work rarely lives in one place. It is spread across CRM records, spreadsheets, decks, call recordings, Slack conversations, Google Drive folders, product notes, competitive research, campaign data, and customer-facing content.</p>
-    <p>That is why integration fit matters.</p>
-
-    <div class="callout">
-      <div class="callout-label">For CoWork, the key question is</div>
-      Can business users bring enough context into the workflow to produce better decisions, messaging, and execution?
-    </div>
-
-    <div class="callout gold">
-      <div class="callout-label">For Code, the key question is</div>
-      Can technical users organize, version, automate, and maintain the workflows that the business wants to reuse?
-    </div>
-
-    <p>Connectors and integrations are important, but they are only inputs. The deeper issue is whether the organization has a repeatable operating model for turning context into action. A GTM team does not just need access to data. It needs structured workflows for using that data.</p>
+    <h3>Where the work actually lives</h3>
+    <p>B2B sales and marketing work rarely lives in one place. It is spread across CRM records, spreadsheets, decks, call recordings, Slack conversations, Drive folders, and campaign data. Connectors and integrations matter, but they are only inputs. The deeper issue is whether the organization has a repeatable operating model for turning context into action:</p>
 
     <ul class="showcase-list">
       <li>Account research should become an account brief.</li>
@@ -992,23 +1032,24 @@
       <li>Intent data should become campaign and outbound strategy.</li>
       <li>Competitive insights should become battlecards and talk tracks.</li>
       <li>Pipeline updates should become executive-ready narratives.</li>
-      <li>Repeatable work should become reusable workflow assets.</li>
     </ul>
 
-    <p>CoWork is better for making these workflows accessible to business users. Code is better for turning the underlying workflow logic into a maintained system.</p>
+    <div class="pull-quote">
+      Cowork makes these workflows accessible to business users. Code turns the underlying workflow logic into a maintained system.
+    </div>
   </section>
 
   <div class="section-divider"></div>
 
-  <!-- Section 5 -->
+  <!-- Section 4 -->
   <section id="buying-triggers">
-    <span class="section-number">05</span>
+    <span class="section-number">04</span>
     <h2>Buying Triggers, Champions, and Internal Politics</h2>
-    <p>CoWork and Code are often purchased, championed, and justified differently.</p>
+    <p>Cowork and Code are purchased, championed, and justified differently.</p>
 
     <div class="comparison-cards">
       <div class="comp-card cowork">
-        <h3>CoWork Buying Triggers</h3>
+        <h3>Cowork Buying Triggers</h3>
         <div class="card-metaphor">When business teams must do more with less</div>
         <ul>
           <li>A CEO or board-level AI mandate</li>
@@ -1017,7 +1058,7 @@
           <li>A new ABM or enterprise-account motion</li>
           <li>A missed forecast or weak pipeline-inspection process</li>
           <li>Sales enablement content that is not being used</li>
-          <li>Leadership pressure to produce better reporting and business narratives</li>
+          <li>Leadership pressure for better reporting and business narratives</li>
         </ul>
         <div class="great-for">
           <strong>Likely champions</strong>
@@ -1044,31 +1085,43 @@
       </div>
     </div>
 
-    <p>The internal politics matter. CoWork is usually easier to introduce as a productivity and workflow tool for business teams. Code usually requires a more technical champion and a clearer architecture story.</p>
+    <h3>The politics, plainly</h3>
+    <p>Cowork typically rides a productivity budget and clears procurement as a business tool. The friction points are IT security review and data-handling questions &mdash; come prepared with answers on where context lives, which connectors are enabled, and who administers them. Code is closer to an engineering-tooling decision: it needs a technical owner who will maintain what gets built, and a sponsor who can defend &ldquo;GTM infrastructure&rdquo; as a budget line.</p>
+    <p>In most organizations the real forcing function is shadow AI. Reps and marketers are already pasting company context into personal chatbot accounts. A sanctioned, governed layer is an easier executive conversation than a prohibition &mdash; and a far easier one than an incident.</p>
+
+    <div class="callout">
+      <div class="callout-label">Before either purchase, check</div>
+      Seat plans and licensing model, data-handling and retention terms against your security requirements, and admin controls for connectors. Those &mdash; not model quality &mdash; are where these deals stall.
+    </div>
   </section>
 
   <div class="section-divider"></div>
 
-  <!-- Section 6 -->
+  <!-- Section 5 -->
   <section id="roi">
-    <span class="section-number">06</span>
+    <span class="section-number">05</span>
     <h2>ROI and the CFO Conversation</h2>
-    <p>The CFO conversation should not be limited to &ldquo;hours saved.&rdquo; That is too narrow. The stronger ROI case is that AI reduces expensive knowledge-work friction while improving consistency, speed, reuse, and governance.</p>
+    <p>The CFO conversation should not be limited to &ldquo;hours saved.&rdquo; That is too narrow. The stronger case is that AI reduces expensive knowledge-work friction while improving consistency, speed, reuse, and governance.</p>
+
+    <div class="callout gold">
+      <div class="callout-label">Illustrative math</div>
+      A six-rep SDR team spending five hours per rep per week on account research burns roughly 1,500 hours a year. If Cowork cuts that time in half, about 750 hours move back to selling &mdash; before any quality gains. Code compounds the return: when one operator maintains the research workflow as a shared, versioned asset, the gain repeats for every rep and survives turnover instead of resetting with each new hire. Swap in your own team size and hourly loads &mdash; the structure of the case is the point, not these particular numbers.
+    </div>
 
     <h3>Time Reclaimed</h3>
-    <p>CoWork can reduce time spent on manual summaries, account research, campaign briefs, deck creation, call debriefs, and executive reporting. Code can reduce time spent recreating workflows, maintaining scattered assets, building repetitive scripts, and manually managing technical GTM infrastructure.</p>
+    <p>Cowork reduces time spent on manual summaries, account research, campaign briefs, deck creation, call debriefs, and executive reporting. Code reduces time spent recreating workflows, maintaining scattered assets, building repetitive scripts, and manually managing technical GTM infrastructure.</p>
 
     <h3>Quality Lift</h3>
-    <p>CoWork can improve the quality of account insights, messaging, campaign strategy, sales preparation, and executive communication. Code can improve the quality and consistency of the underlying workflow system.</p>
+    <p>Cowork raises the floor on account insights, messaging, campaign strategy, sales preparation, and executive communication. Code raises the consistency of the underlying workflow system itself.</p>
 
     <h3>Cycle-Time Reduction</h3>
-    <p>CoWork can help teams move faster from research to output. Code can help teams move faster from one-off workflow to reusable system.</p>
+    <p>Cowork moves teams faster from research to output. Code moves teams faster from one-off workflow to reusable system.</p>
 
     <h3>Reuse and Leverage</h3>
-    <p>The biggest ROI comes when AI work stops being disposable. A one-time account brief has value. A repeatable account-brief workflow has more value. A governed, versioned, reusable account-intelligence system has even more value.</p>
+    <p>The biggest ROI comes when AI work stops being disposable. A one-time account brief has value. A repeatable account-brief workflow has more. A governed, versioned account-intelligence system has the most &mdash; and that is the Cowork-to-Code progression in one sentence.</p>
 
     <h3>Risk Reduction</h3>
-    <p>Unmanaged AI usage creates risk: inconsistent outputs, hallucinated claims, security concerns, poor documentation, and lack of review. CoWork can help keep humans in the review loop. Code can help create more structured governance through files, repositories, version control, and documented workflows.</p>
+    <p>Unmanaged AI usage creates risk: inconsistent outputs, hallucinated claims, security concerns, poor documentation, and lack of review. Cowork keeps humans in the review loop. Code creates structured governance through files, repositories, version control, and documented workflows.</p>
 
     <div class="pull-quote">
       AI creates value when it turns scattered knowledge work into faster, better, more repeatable execution &mdash; without creating unmanaged operational risk.
@@ -1077,19 +1130,19 @@
 
   <div class="section-divider"></div>
 
-  <!-- Section 7 -->
+  <!-- Section 6 -->
   <section id="decision-guide">
-    <span class="section-number">07</span>
-    <h2>Decision Guide: CoWork, Code, or Both</h2>
+    <span class="section-number">06</span>
+    <h2>Decision Guide: Cowork, Code, or Both</h2>
     <p>The practical answer is not always either/or. For most B2B sales and marketing organizations, the better framing is sequencing.</p>
 
     <div class="decision-grid">
       <div class="decision-card cowork-decision">
-        <div class="label-tag">Start with CoWork when</div>
+        <div class="label-tag">Start with Cowork when</div>
         <ul>
           <li>The users are sales, marketing, enablement, RevOps, or leadership teams</li>
-          <li>The main need is research, synthesis, messaging, planning, reporting, or workflow execution</li>
-          <li>The organization wants business users to adopt AI without requiring technical expertise</li>
+          <li>The main need is research, synthesis, messaging, planning, or reporting</li>
+          <li>The organization wants business users to adopt AI without technical expertise</li>
           <li>The team needs immediate productivity gains</li>
           <li>The work is still being discovered, tested, and refined</li>
         </ul>
@@ -1099,7 +1152,7 @@
         <div class="label-tag">Start with Code when</div>
         <ul>
           <li>The users are developers, RevOps architects, AI operators, or technical GTM builders</li>
-          <li>The organization wants to build durable workflow infrastructure</li>
+          <li>The organization wants durable workflow infrastructure</li>
           <li>The team needs version control, file structure, automation, or repo-based management</li>
           <li>The use case involves maintaining prompts, templates, playbooks, scripts, or internal systems</li>
           <li>The organization is ready to systematize AI workflows</li>
@@ -1110,9 +1163,8 @@
         <div class="label-tag">Use Both when</div>
         <ul>
           <li>Business users need an accessible front end for GTM work</li>
-          <li>Technical operators need to maintain the workflow architecture behind the scenes</li>
-          <li>The organization wants to move from AI experimentation to an AI-enabled operating system</li>
-          <li>Sales and marketing teams need repeatable workflows, not just one-off AI outputs</li>
+          <li>Technical operators maintain the workflow architecture behind the scenes</li>
+          <li>The organization is moving from AI experimentation to an AI-enabled operating system</li>
           <li>Governance, reuse, and scale matter</li>
         </ul>
       </div>
@@ -1132,40 +1184,41 @@
           <tr>
             <td>Experimenting</td>
             <td>Try AI on real GTM tasks</td>
-            <td>CoWork</td>
+            <td>Cowork</td>
           </tr>
           <tr>
             <td>Adopting</td>
             <td>Standardize repeatable sales and marketing workflows</td>
-            <td>CoWork</td>
+            <td>Cowork</td>
           </tr>
           <tr>
             <td>Scaling</td>
             <td>Govern prompts, files, workflows, and context</td>
-            <td>CoWork + Code</td>
+            <td>Cowork, with Code entering to systematize what works</td>
           </tr>
           <tr>
             <td>Operating System</td>
             <td>Build versioned GTM workflow infrastructure</td>
-            <td>Code + CoWork</td>
+            <td>Code maintains the system; Cowork is how the business runs it</td>
           </tr>
         </tbody>
       </table>
       <div class="table-insight">
-        CoWork is the adoption layer. Code is the architecture layer. CoWork helps GTM teams do the work. Code helps technical operators turn that work into a system.
+        Cowork is the adoption layer. Code is the architecture layer. Cowork helps GTM teams do the work. Code helps technical operators turn that work into a system.
       </div>
     </div>
   </section>
 
   <!-- CTA -->
   <section class="cta-section">
-    <h2>Turn GTM Work Into a Repeatable System</h2>
-    <p>CoWork is the adoption layer. Code is the architecture layer. The right starting point depends on where your team is today.</p>
+    <h2>Not Sure Which Layer Comes First?</h2>
+    <p>That is exactly the conversation we have with B2B GTM teams every week. Bring your current workflows &mdash; we will map them to a starting point and a sequence.</p>
     <div class="cta-buttons">
-      <a href="https://www.b2bfusiongroup.com/" target="_blank" rel="noopener" class="btn btn-primary">
+      <a href="https://b2bfusiongroup.com/contact-us/" target="_blank" rel="noopener" class="btn btn-primary">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
-        B2B Fusion
+        Book a free consultation
       </a>
+      <a href="https://www.linkedin.com/company/b2bfusion/" target="_blank" rel="noopener" class="btn btn-secondary">Follow B2B Fusion on LinkedIn</a>
     </div>
   </section>
 
@@ -1173,10 +1226,11 @@
 
 <footer>
   <div class="container">
-    <p>By <a href="https://www.b2bfusiongroup.com/" target="_blank" rel="noopener">Jon Russo</a> &middot; B2B Fusion</p>
+    <p>By <a href="https://www.b2bfusiongroup.com/" target="_blank" rel="noopener">Jon Russo</a> &middot; B2B Fusion &middot; <a href="mailto:hello@b2bfusiongroup.com">hello@b2bfusiongroup.com</a> &middot; <a href="https://www.linkedin.com/company/b2bfusion/" target="_blank" rel="noopener">LinkedIn</a></p>
   </div>
 </footer>
 
+<script defer src="/_vercel/insights/script.js"></script>
 <script>
   // Reading progress bar
   (function() {
